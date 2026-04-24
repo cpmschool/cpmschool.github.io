@@ -39,3 +39,6 @@ function prevSlide() {
 setInterval(() => {
   nextSlide();
 }, 4000);
+function toggleMenu() {
+  document.getElementById("navMenu").classList.toggle("show");
+}
