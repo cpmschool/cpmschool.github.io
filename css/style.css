@@ -331,3 +331,7 @@ p {
   transform: translateY(-5px);
   transition: 0.3s;
 }
+.section p {
+  max-width: 800px;
+  margin: 10px auto;
+}
