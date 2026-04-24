@@ -38,23 +38,22 @@ function prevSlide() {
 /* AUTO SLIDE */
 setInterval(() => {
   nextSlide();
-}, 4000);
-function toggleMenu() {
-  document.getElementById("navMenu").classList.toggle("show");
-}
-const sections = document.querySelectorAll("section");
+}, 4000);show");
+    }
+const elements = document.querySelectorAll(".animate");
 
 window.addEventListener("scroll", () => {
-  const trigger = window.innerHeight * 0.8;
+  const trigger = window.innerHeight * 0.85;
 
-  sections.forEach(section => {
-    const top = section.getBoundingClientRect().top;
+  elements.forEach(el => {
+    const top = el.getBoundingClientRect().top;
 
     if (top < trigger) {
-      section.classList.add("show");
+      el.classList.add("show");
     }
   });
 });
+
 let currentIndex = 0;
 let images = document.querySelectorAll(".grid img");
 
