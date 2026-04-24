@@ -118,20 +118,33 @@ footer {
 }
 
 /* WHATSAPP BUTTON (MODERN STYLE) */
-.whatsapp {
+..whatsapp {
   position: fixed;
   bottom: 20px;
   right: 20px;
+
+  width: 55px;
+  height: 55px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
   background: #25D366;
-  color: white;
-  padding: 12px 18px;
-  border-radius: 30px;
-  text-decoration: none;
-  font-weight: bold;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+  border-radius: 50%;
+
+  box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+
   transition: 0.3s;
+  z-index: 1000;
 }
 
+.whatsapp img {
+  width: 28px;
+}
+
+/* HOVER EFFECT */
 .whatsapp:hover {
+  transform: scale(1.1);
   background: #1ebe5d;
 }
