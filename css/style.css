@@ -243,3 +243,29 @@ section {
 .whatsapp:hover {
   transform: scale(1.15);
 }
+.menu-toggle {
+  display: none;
+  font-size: 24px;
+  cursor: pointer;
+}
+
+/* MOBILE */
+@media (max-width: 768px) {
+  .menu-toggle {
+    display: block;
+  }
+
+  #navMenu {
+    display: none;
+    flex-direction: column;
+    background: #0d6efd;
+    position: absolute;
+    top: 60px;
+    right: 0;
+    width: 200px;
+  }
+
+  #navMenu.show {
+    display: flex;
+  }
+}
