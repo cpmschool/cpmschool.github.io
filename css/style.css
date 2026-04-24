@@ -335,3 +335,15 @@ p {
   max-width: 800px;
   margin: 10px auto;
 }
+.contact-box {
+  display: flex;
+  gap: 20px;
+  margin-top: 20px;
+}
+
+.contact-box div {
+  flex: 1;
+  background: #f4f4f4;
+  padding: 20px;
+  border-radius: 10px;
+}
