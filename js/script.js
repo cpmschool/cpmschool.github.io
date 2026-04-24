@@ -55,3 +55,25 @@ window.addEventListener("scroll", () => {
     }
   });
 });
+let currentIndex = 0;
+let images = document.querySelectorAll(".grid img");
+
+function openImage(pic) {
+  document.getElementById("imageBox").style.display = "flex";
+  document.getElementById("fullImage").src = pic.src;
+  currentIndex = Array.from(images).indexOf(pic);
+}
+
+function closeImage() {
+  document.getElementById("imageBox").style.display = "none";
+}
+
+function nextImage() {
+  currentIndex = (currentIndex + 1) % images.length;
+  document.getElementById("fullImage").src = images[currentIndex].src;
+}
+
+function prevImage() {
+  currentIndex = (currentIndex - 1 + images.length) % images.length;
+  document.getElementById("fullImage").src = images[currentIndex].src;
+}
