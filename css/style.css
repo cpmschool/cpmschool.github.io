@@ -319,3 +319,15 @@ section.show {
   opacity: 1;
   transform: translateY(0);
 }
+h2 {
+  margin-bottom: 15px;
+}
+
+p {
+  color: #555;
+}
+
+.features div:hover {
+  transform: translateY(-5px);
+  transition: 0.3s;
+}
