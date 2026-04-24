@@ -269,3 +269,10 @@ section {
     display: flex;
   }
 }
+.grid img {
+  transition: 0.3s;
+}
+
+.grid img:hover {
+  transform: scale(1.08);
+}
