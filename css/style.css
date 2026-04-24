@@ -75,3 +75,8 @@ footer {
   text-align: center;
   padding: 20px;
 }
+.whatsapp {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+}
