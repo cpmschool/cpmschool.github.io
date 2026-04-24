@@ -1,12 +1,14 @@
 <section class="gallery">
-  <div class="container">
-    <h2>Gallery</h2>
+  <h2>Our Gallery</h2>
 
-    <div class="grid">
-      <img src="images/g1.jpg">
-      <img src="images/g2.jpg">
-      <img src="images/g3.jpg">
-    </div>
-
+  <div class="grid">
+    <img src="images/g1.jpg" onclick="openImage(this)">
+    <img src="images/g2.jpg" onclick="openImage(this)">
+    <img src="images/g3.jpg" onclick="openImage(this)">
   </div>
 </section>
+
+<!-- FULL IMAGE VIEW -->
+<div id="imageBox" onclick="closeImage()">
+  <img id="fullImage">
+</div>
