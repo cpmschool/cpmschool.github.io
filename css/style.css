@@ -1,0 +1,77 @@
+/* RESET */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* BODY */
+body {
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+}
+
+/* HEADER */
+header {
+  background: #0d6efd;
+  color: white;
+  padding: 15px 0;
+}
+
+.container {
+  width: 90%;
+  margin: auto;
+}
+
+/* NAVBAR */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.navbar ul {
+  display: flex;
+  list-style: none;
+  gap: 20px;
+}
+
+.navbar a {
+  color: white;
+  text-decoration: none;
+}
+
+/* HERO SECTION */
+.hero {
+  background: url('../images/school.jpg') no-repeat center/cover;
+  height: 400px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  text-align: center;
+}
+
+/* BUTTON */
+.btn {
+  display: inline-block;
+  background: orange;
+  padding: 10px 20px;
+  margin-top: 10px;
+  color: white;
+  text-decoration: none;
+}
+
+/* SECTION */
+section {
+  padding: 40px 0;
+}
+
+/* FOOTER */
+footer {
+  background: #222;
+  color: white;
+  text-align: center;
+  padding: 20px;
+}
