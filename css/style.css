@@ -276,3 +276,23 @@ section {
 .grid img:hover {
   transform: scale(1.08);
 }
+.features {
+  display: flex;
+  gap: 20px;
+  margin-top: 20px;
+}
+
+.features div {
+  flex: 1;
+  padding: 20px;
+  background: white;
+  border-radius: 10px;
+}
+.btn {
+  border-radius: 25px;
+  transition: 0.3s;
+}
+
+.btn:hover {
+  background: #e69500;
+}
