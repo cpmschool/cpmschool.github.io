@@ -358,3 +358,23 @@ p {
   padding: 20px;
   border-radius: 10px;
 }
+.contact-box {
+  display: flex;
+  gap: 20px;
+  margin-top: 20px;
+}
+
+.contact-box div {
+  flex: 1;
+  background: #f4f4f4;
+  padding: 20px;
+  border-radius: 10px;
+  text-align: center;
+}
+
+/* MOBILE FIX */
+@media (max-width: 768px) {
+  .contact-box {
+    flex-direction: column;
+  }
+}
