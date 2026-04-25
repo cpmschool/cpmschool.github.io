@@ -1,26 +1,25 @@
-/* RESET */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
-/* BODY */
 body {
-  font-family: Arial, sans-serif;
+  font-family: Arial;
 }
 
-/* CONTAINER */
 .container {
   width: 90%;
   margin: auto;
 }
 
-/* HEADER */
 header {
   background: #0d6efd;
   color: white;
   padding: 10px 0;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
 }
 
 .navbar {
@@ -29,7 +28,6 @@ header {
   align-items: center;
 }
 
-/* LOGO */
 .logo {
   display: flex;
   align-items: center;
@@ -40,7 +38,6 @@ header {
   width: 40px;
 }
 
-/* NAV */
 .navbar ul {
   display: flex;
   list-style: none;
@@ -54,181 +51,6 @@ header {
 
 /* SLIDER */
 .slider {
-  overflow: hidden;
-}
-
-.slides {
-  display: flex;
-  width: 300%;
-  animation: slide 12s infinite;
-}
-
-.slide {
-  width: 100%;
-  position: relative;
-}
-
-.slide img {
-  width: 100%;
-  height: 450px;
-  object-fit: cover;
-}
-
-/* TEXT ON SLIDER */
-.text {
-  position: absolute;
-  bottom: 50px;
-  left: 50px;
-  color: white;
-}
-
-/* ANIMATION */
-section {
-  opacity: 1;
-  transform: translateY(0);
-}
-
-/* Only animate when JS adds class */
-.animate {
-  opacity: 0;
-  transform: translateY(40px);
-  transition: 0.6s;
-}
-
-.animate.show {
-  opacity: 1;
-  transform: translateY(0);
-}
-
-/* SECTIONS */
-.section {
-  padding: 50px 0;
-  text-align: center;
-}
-
-.light {
-  background: #f4f4f4;
-}
-
-/* BUTTON */
-.btn {
-  display: inline-block;
-  margin-top: 10px;
-  padding: 10px 20px;
-  background: orange;
-  color: white;
-  text-decoration: none;
-}
-
-/* FOOTER */
-footer {
-  background: #222;
-  color: white;
-  text-align: center;
-  padding: 15px;
-}
-
-/* WHATSAPP BUTTON (MODERN STYLE) */
-..whatsapp {
-  position: fixed;
-  bottom: 20px;
-  right: 20px;
-
-  width: 55px;
-  height: 55px;
-
-  display: flex;
-  justify-content: center;
-  align-items: center;
-
-  background: #25D366;
-  border-radius: 50%;
-
-  box-shadow: 0 4px 12px rgba(0,0,0,0.3);
-
-  transition: 0.3s;
-  z-index: 1000;
-}
-
-.whatsapp img {
-  width: 28px;
-}
-
-/* HOVER EFFECT */
-.whatsapp:hover {
-  transform: scale(1.1);
-  background: #1ebe5d;
-}
-.whatsapp::after {
-  content: '';
-  position: absolute;
-  width: 55px;
-  height: 55px;
-  border-radius: 50%;
-  background: rgba(37, 211, 102, 0.5);
-  animation: pulse 1.5s infinite;
-  z-index: -1;
-}
-
-@keyframes pulse {
-  0% { transform: scale(1); opacity: 0.7; }
-  70% { transform: scale(1.6); opacity: 0; }
-  100% { transform: scale(1); opacity: 0; }
-}
-.gallery {
-  padding: 40px;
-  text-align: center;
-}
-
-.grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 15px;
-}
-
-.grid img {
-  width: 100%;
-  height: 250px;
-  object-fit: cover;
-  cursor: pointer;
-}
-
-/* FULL IMAGE VIEW */
-##imageBox {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  display: none;
-  background: rgba(0,0,0,0.9);
-  justify-content: center;
-  align-items: center;
-}
-
-#imageBox img {
-  width: 80%;
-  max-width: 800px;
-}
-
-.close, .prev, .next {
-  position: absolute;
-  color: white;
-  font-size: 30px;
-  cursor: pointer;
-}
-
-.close { top: 20px; right: 30px; }
-.prev { left: 20px; top: 50%; }
-.next { right: 20px; top: 50%; }
-}
-
-header {
-  position: sticky;
-  top: 0;
-  z-index: 1000;
-}
-.slider {
   position: relative;
   overflow: hidden;
 }
@@ -240,7 +62,7 @@ header {
 
 .slides img {
   width: 100%;
-  height: 450px;
+  height: 400px;
   object-fit: cover;
 }
 
@@ -254,26 +76,78 @@ header {
   padding: 10px;
   cursor: pointer;
 }
-section {
-  animation: fadeIn 1s ease;
-}
 
-@keyframes fadeIn {
-  from { opacity: 0; transform: translateY(20px); }
-  to { opacity: 1; transform: translateY(0); }
-}
 .prev { left: 10px; }
 .next { right: 10px; }
-.whatsapp:hover {
-  transform: scale(1.15);
+
+/* SECTIONS */
+.section {
+  padding: 50px 0;
+  text-align: center;
 }
+
+.light {
+  background: #f4f4f4;
+}
+
+/* FEATURES */
+.features {
+  display: flex;
+  gap: 20px;
+  margin-top: 20px;
+}
+
+.features div {
+  flex: 1;
+  padding: 20px;
+  background: white;
+  border-radius: 10px;
+}
+
+/* BUTTON */
+.btn {
+  display: inline-block;
+  margin-top: 10px;
+  padding: 10px 20px;
+  background: orange;
+  color: white;
+  text-decoration: none;
+  border-radius: 25px;
+}
+
+/* FOOTER */
+footer {
+  background: #222;
+  color: white;
+  text-align: center;
+  padding: 15px;
+}
+
+/* WHATSAPP */
+.whatsapp {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  width: 55px;
+  height: 55px;
+  background: #25D366;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.whatsapp img {
+  width: 28px;
+}
+
+/* MOBILE */
 .menu-toggle {
   display: none;
   font-size: 24px;
   cursor: pointer;
 }
 
-/* MOBILE */
 @media (max-width: 768px) {
   .menu-toggle {
     display: block;
@@ -292,89 +166,8 @@ section {
   #navMenu.show {
     display: flex;
   }
-}
-.grid img {
-  transition: 0.3s;
-}
 
-.grid img:hover {
-  transform: scale(1.08);
-}
-.features {
-  display: flex;
-  gap: 20px;
-  margin-top: 20px;
-}
-
-.features div {
-  flex: 1;
-  padding: 20px;
-  background: white;
-  border-radius: 10px;
-}
-.btn {
-  border-radius: 25px;
-  transition: 0.3s;
-}
-
-.btn:hover {
-  background: #e69500;
-}
-section {
-  opacity: 0;
-  transform: translateY(40px);
-  transition: 0.6s;
-}
-
-section.show {
-  opacity: 1;
-  transform: translateY(0);
-}
-h2 {
-  margin-bottom: 15px;
-}
-
-p {
-  color: #555;
-}
-
-.features div:hover {
-  transform: translateY(-5px);
-  transition: 0.3s;
-}
-.section p {
-  max-width: 800px;
-  margin: 10px auto;
-}
-.contact-box {
-  display: flex;
-  gap: 20px;
-  margin-top: 20px;
-}
-
-.contact-box div {
-  flex: 1;
-  background: #f4f4f4;
-  padding: 20px;
-  border-radius: 10px;
-}
-.contact-box {
-  display: flex;
-  gap: 20px;
-  margin-top: 20px;
-}
-
-.contact-box div {
-  flex: 1;
-  background: #f4f4f4;
-  padding: 20px;
-  border-radius: 10px;
-  text-align: center;
-}
-
-/* MOBILE FIX */
-@media (max-width: 768px) {
-  .contact-box {
+  .features {
     flex-direction: column;
   }
 }
