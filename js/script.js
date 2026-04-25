@@ -1,28 +1,31 @@
-// MENU
+// MENU FIX
 function toggleMenu() {
   document.getElementById("navMenu").classList.toggle("show");
 }
 
-// SLIDER
-let index = 0;
+// POPUP
+function openStudent(el) {
+  document.getElementById("studentPopup").style.display = "flex";
 
-function showSlide(i) {
-  const slides = document.getElementById("slides");
-  const total = slides.children.length;
-
-  if (i >= total) index = 0;
-  else if (i < 0) index = total - 1;
-  else index = i;
-
-  slides.style.transform = "translateX(-" + (index * 100) + "%)";
+  document.getElementById("popupName").innerText = el.dataset.name;
+  document.getElementById("popupDream").innerText = el.dataset.dream;
+  document.getElementById("popupStory").innerText = el.dataset.story;
+  document.getElementById("popupImg").src = el.dataset.img;
 }
 
-function nextSlide() {
-  showSlide(index + 1);
+function closePopup() {
+  document.getElementById("studentPopup").style.display = "none";
 }
 
-function prevSlide() {
-  showSlide(index - 1);
-}
+// SCROLL ANIMATION
+const elements = document.querySelectorAll(".animate");
 
-setInterval(nextSlide, 4000);
+window.addEventListener("scroll", () => {
+  const trigger = window.innerHeight * 0.85;
+
+  elements.forEach(el => {
+    if (el.getBoundingClientRect().top < trigger) {
+      el.classList.add("show");
+    }
+  });
+});
