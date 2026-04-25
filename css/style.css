@@ -394,3 +394,38 @@ footer {
     display: flex;
   }
 }
+/* FIX ALL IMAGES */
+img {
+  max-width: 100%;
+  display: block;
+}
+
+/* FIX CARD IMAGE SIZE */
+.feature-box img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
+}
+
+/* TEACHER IMAGES */
+.teacher-card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+/* GRID FIX */
+.features {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 20px;
+}
+
+.teachers-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 20px;
+}
