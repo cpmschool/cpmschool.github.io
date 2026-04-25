@@ -1,26 +1,71 @@
-// MENU FIX
+// ================= MENU =================
 function toggleMenu() {
-  document.getElementById("navMenu").classList.toggle("show");
+  const menu = document.getElementById("navMenu");
+  if (menu) {
+    menu.classList.toggle("show");
+  }
 }
 
-// POPUP
+// ================= STUDENT POPUP =================
 function openStudent(el) {
-  document.getElementById("studentPopup").style.display = "flex";
+  const popup = document.getElementById("studentPopup");
+  if (!popup) return;
 
-  document.getElementById("popupName").innerText = el.dataset.name;
-  document.getElementById("popupDream").innerText = el.dataset.dream;
-  document.getElementById("popupStory").innerText = el.dataset.story;
-  document.getElementById("popupImg").src = el.dataset.img;
+  popup.style.display = "flex";
+
+  const name = document.getElementById("popupName");
+  const dream = document.getElementById("popupDream");
+  const story = document.getElementById("popupStory");
+  const img = document.getElementById("popupImg");
+
+  if (name) name.innerText = el.dataset.name || "";
+  if (dream) dream.innerText = el.dataset.dream || "";
+  if (story) story.innerText = el.dataset.story || "";
+  if (img) img.src = el.dataset.img || "";
 }
 
 function closePopup() {
-  document.getElementById("studentPopup").style.display = "none";
+  const popup = document.getElementById("studentPopup");
+  if (popup) {
+    popup.style.display = "none";
+  }
 }
 
-// SCROLL ANIMATION
-const elements = document.querySelectorAll(".animate");
+// ================= SLIDER =================
+let index = 0;
 
+function showSlide(i) {
+  const slides = document.getElementById("slides");
+  if (!slides) return;
+
+  const total = slides.children.length;
+
+  if (i >= total) index = 0;
+  else if (i < 0) index = total - 1;
+  else index = i;
+
+  slides.style.transform = "translateX(" + (-index * 100) + "%)";
+}
+
+function nextSlide() {
+  showSlide(index + 1);
+}
+
+function prevSlide() {
+  showSlide(index - 1);
+}
+
+// AUTO SLIDE (only if slider exists)
+setInterval(() => {
+  const slides = document.getElementById("slides");
+  if (slides) {
+    nextSlide();
+  }
+}, 4000);
+
+// ================= SCROLL ANIMATION =================
 window.addEventListener("scroll", () => {
+  const elements = document.querySelectorAll(".animate");
   const trigger = window.innerHeight * 0.85;
 
   elements.forEach(el => {
