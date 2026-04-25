@@ -374,4 +374,23 @@ footer {
   opacity: 1;
   transform: translateY(0);
 }
-  
+  #navMenu {
+  display: flex;
+  gap: 20px;
+}
+
+@media (max-width: 768px) {
+  #navMenu {
+    display: none;
+    flex-direction: column;
+    background: #0d6efd;
+    position: absolute;
+    top: 60px;
+    right: 0;
+    width: 200px;
+  }
+
+  #navMenu.show {
+    display: flex;
+  }
+}
