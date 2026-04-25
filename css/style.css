@@ -206,3 +206,37 @@ footer {
     flex-direction: column;
   }
 }
+.students-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 20px;
+  margin-top: 20px;
+}
+
+.student-card {
+  background: white;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  text-align: center;
+  transition: 0.3s;
+}
+
+.student-card img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+}
+
+.student-card h3 {
+  margin: 10px 0 5px;
+}
+
+.student-card p {
+  padding-bottom: 10px;
+  color: #555;
+}
+
+.student-card:hover {
+  transform: translateY(-5px);
+}
